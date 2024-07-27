@@ -161,7 +161,9 @@ uint8_t ahdlc_rx(FAR struct ppp_context_s *ctx, uint8_t c)
 
           ctx->ahdlc_flags &= ~PPP_ESCAPED;
 
-          /* If value is 0x7e then silently discard and reset receive packet */
+          /* If value is 0x7e then silently discard and reset receive
+           * packet
+           */
 
           if (c == 0x7e)
             {
