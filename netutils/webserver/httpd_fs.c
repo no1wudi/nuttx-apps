@@ -38,7 +38,7 @@
  ****************************************************************************/
 
 /****************************************************************************
- * Included Header Files
+ * Included Files
  ****************************************************************************/
 
 #include <stdint.h>
@@ -69,7 +69,7 @@ static uint8_t httpd_fs_strcmp(const char *str1, const char *str2)
   int i;
 
   i = 0;
-  for (;;)
+  for (; ; )
     {
       if (str2[i] == 0 || str1[i] == '\r' || str1[i] == '\n')
         {
@@ -109,6 +109,7 @@ int httpd_fs_open(const char *name, struct httpd_fs_file *file)
 #endif
           return OK;
         }
+
 #ifdef CONFIG_NETUTILS_HTTPDFSSTATS
       ++i;
 #endif
@@ -122,7 +123,7 @@ void httpd_fs_init(void)
 #ifdef CONFIG_NETUTILS_HTTPDFSSTATS
   uint16_t i;
 
-  count = (uint16_t*)malloc(g_httpd_numfiles * sizeof(uint16_t));
+  count = (uint16_t *)malloc(g_httpd_numfiles * sizeof(uint16_t));
 
   for (i = 0; i < g_httpd_numfiles; i++)
     {
@@ -146,6 +147,7 @@ uint16_t httpd_fs_count(char *name)
         {
           return count[i];
         }
+
       ++i;
     }
 

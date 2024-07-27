@@ -30,7 +30,9 @@
 /****************************************************************************
  * Pre-processor Definitions
  ****************************************************************************/
+
 /* Configuration ************************************************************/
+
 /* CONFIG_EXAMPLES_TOUCHSCREEN_MINOR - The minor device number.  Minor=N
  *   corresponds to touchscreen device /dev/input0.  Note this value must
  *   with CONFIG_EXAMPLES_TOUCHSCREEN_DEVPATH.  Default 0.

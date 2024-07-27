@@ -74,15 +74,15 @@ struct chat_line
 
     /* type-1 chat line expected string */
 
-    FAR char* expect;
+    FAR char *expect;
   } lhs;
 
   /* type 0: command argument
    * type 1: string to be sent
    */
 
-  FAR char* rhs;
-  FAR struct chat_line* next; /* pointer to the next line in the script */
+  FAR char *rhs;
+  FAR struct chat_line *next; /* pointer to the next line in the script */
 };
 
 /* Chat private state. */
@@ -90,7 +90,7 @@ struct chat_line
 struct chat
 {
   struct chat_ctl ctl;             /* Embedded 'chat_ctl' type. */
-  FAR struct chat_line* script;    /* first line of the script */
+  FAR struct chat_line *script;    /* first line of the script */
 };
 
 #endif /* __APPS_NETUTILS_CHAT_CHAT_H */

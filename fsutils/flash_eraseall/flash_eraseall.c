@@ -69,7 +69,8 @@ int flash_eraseall(FAR const char *driver)
       if (ret < 0)
         {
           errcode = errno;
-          ferr("ERROR: MTD ioctl(%04x) failed: %d\n", MTDIOC_BULKERASE, errcode);
+          ferr("ERROR: MTD ioctl(%04x) failed: %d\n",
+               MTDIOC_BULKERASE, errcode);
           ret = -errcode;
         }
 

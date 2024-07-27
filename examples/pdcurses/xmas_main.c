@@ -1,5 +1,5 @@
 /****************************************************************************
- * apps/examples/pdcurses/tui.c
+ * apps/examples/pdcurses/xams_main.c
  *
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -52,7 +52,6 @@
 
 #define SHOW(win, pause) mvwin(win, y_pos, x_pos); wrefresh(win); \
              wrefresh(w_del_msg); napms(pause)
-
 
 /****************************************************************************
  * Private Function Prototypes
@@ -849,6 +848,7 @@ int main(int argc, FAR char *argv[])
   strng5();
 
   /* set up the windows for our blinking trees */
+
   /* treescrn3 */
 
   overlay(treescrn, treescrn3);

@@ -107,10 +107,10 @@ static int passwd_copyfile(FAR char *iobuffer, FILE *instream,
                 {
                   /* End of file encountered.
                    *
-                   * This occurs normally when copying to the end-of-the file.
-                   * In that case, the caller just sticks a huge number in for
-                   * copysize and lets the end-of-file indication terminate the
-                   * copy.
+                   * This occurs normally when copying to the end-of-the
+                   * file. In that case, the caller just sticks a huge number
+                   * in for copysize and lets the end-of-file indication
+                   * terminate the copy.
                    */
 
                   eof = true;
